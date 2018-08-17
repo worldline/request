@@ -11,16 +11,14 @@ var s = require('net').createServer(function (sock) {
 
 tape('setup', function (t) {
   s.listen(0, function () {
-    s.url = 'http://localhost:' + this.address().port
     t.end()
   })
 })
 
 tape('proxy opts.timeout', function (t) {
   request({
-    tunnel: true,
-    url: 'http://' + proxiedHost,
-    proxy: s.url,
+    url: 'https://' + proxiedHost,
+    proxy: 'http://127.0.0.1:' + s.address().port,
     timeout: 100
   }, function (err, res, body) {
     t.notEqual(err, null)
