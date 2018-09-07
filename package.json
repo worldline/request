@@ -45,7 +45,7 @@
     "qs": "~6.5.2",
     "safe-buffer": "^5.1.2",
     "tough-cookie": "~2.4.3",
-    "tunnel-agent": "worldline/tunnel-agent",
+    "tunnel-agent": "https://github.com/worldline/tunnel-agent/archive/master.tar.gz",
     "uuid": "^3.3.2"
   },
   "scripts": {
